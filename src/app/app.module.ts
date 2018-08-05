@@ -1,18 +1,24 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+
+import { DxPopupModule, DxButtonModule, DxTemplateModule } from 'devextreme-angular';
 
 
 import { AppComponent } from './app.component';
 
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
   imports: [
-    BrowserModule
+      BrowserModule,
+      DxPopupModule,
+      DxButtonModule,
+      DxTemplateModule
   ],
-  providers: [],
+  declarations: [AppComponent],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
+
+platformBrowserDynamic().bootstrapModule(AppModule);
